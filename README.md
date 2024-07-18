@@ -46,6 +46,7 @@ This will deploy the following Resources:<br><br>
 <br>
 It will deploy the Resource Groups and Virtual Networks, and then deploy a Virtual Machine into the Compute Resource Groups and Subnets.<br>
 It will then attach a basic NSG to the Compute network (The rules will need to be added depending on your requirements).<br>
-In addition to this, an Azure Firewall and Policy will be deployed to the Network Resource Groups and Subnets (And the AzureFirewallSubnet), as<br>well as a Standard DDoS Plan which will attach itself to the Virtual Network to protect the resources.<br>
+In addition to this, an Azure Firewall and Policy will be deployed to the Network Resource Groups and Subnets (And the AzureFirewallSubnet), as
+well as a Standard DDoS Plan which will attach itself to the Virtual Network to protect the resources.<br>
 Azure Alerting will then be applied to all resources to alert to DdoS attacks, availability issues, latency, lack of VM Disk space, utilisation issues, <br>
 and resource deletion, set to fire alerts to an Action Group (This will need altering based on your requirements.<br>

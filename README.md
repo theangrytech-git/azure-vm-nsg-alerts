@@ -3,7 +3,7 @@
 <br>
 <B>What's in it?</b><br>
 <br>
-This will deploy the following Resources:<br>
+This will deploy the following Resources:<br><br>
 <b>Resource Groups</b><br>
 * rg_compute<br>
 * rg_networking<br>

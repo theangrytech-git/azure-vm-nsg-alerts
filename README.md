@@ -50,3 +50,8 @@ In addition to this, an Azure Firewall and Policy will be deployed to the Networ
 well as a Standard DDoS Plan which will attach itself to the Virtual Network to protect the resources.<br>
 Azure Alerting will then be applied to all resources to alert to DdoS attacks, availability issues, latency, lack of VM Disk space, utilisation issues, <br>
 and resource deletion, set to fire alerts to an Action Group (This will need altering based on your requirements.<br>
+<br>
+<br>
+<B>Future Tasks</b>
+* Create a network diagram and add it here for visability.<br>
+* Create an answers.tfvars file and remove answers from variables.tf to the answers.tfvars file.<br>

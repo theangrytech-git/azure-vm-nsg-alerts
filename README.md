@@ -55,3 +55,4 @@ and resource deletion, set to fire alerts to an Action Group (This will need alt
 <B>Future Tasks</b><br>
 * Create a network diagram and add it here for visability.<br>
 * Create an answers.tfvars file and remove answers from variables.tf to the answers.tfvars file.<br>
+* Add code for Virtual Machine (Linux), Virtual Machine Scale Sets, and Availability Sets.<br> 

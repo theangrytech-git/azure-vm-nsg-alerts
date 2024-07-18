@@ -52,6 +52,6 @@ Azure Alerting will then be applied to all resources to alert to DdoS attacks, a
 and resource deletion, set to fire alerts to an Action Group (This will need altering based on your requirements.<br>
 <br>
 <br>
-<B>Future Tasks</b>
+<B>Future Tasks</b><br>
 * Create a network diagram and add it here for visability.<br>
 * Create an answers.tfvars file and remove answers from variables.tf to the answers.tfvars file.<br>

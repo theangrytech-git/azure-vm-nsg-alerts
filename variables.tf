@@ -82,6 +82,11 @@ variable "snet_security" {
   default     = "snet-uks-security"
 }
 
+variable "snet_firewall" {
+  description = "The name of the firewall subnet"
+  type        = string
+  default     = "AzureFirewallSubnet"
+}
 
 /*******************************************************************************
                          CREATE STORAGE ACCOUNT
@@ -120,55 +125,55 @@ variable "sa_tls" {
 variable "win_1_vm_name" {
   description = "VM Name" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
   type        = string
-  default     = "vm-uks-test-virtualmachine_1"
+  default     = "vm-uks-tst-vm-1"
 }
 
 variable "win_1_vm_size" {
-  description = "VM Size" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "VM Size"
   type        = string
   default     = "Standard_B2s"
 }
 
 variable "win_1_admin_un" {
-  description = "Username of Admin Account" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "Username of Admin Account" 
   type        = string
   default     = "adminuser"
 }
 
 #VM OS Disk
 variable "win_1_os_disk_cache" {
-  description = "What OS Disk Caching is enabled?" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "What OS Disk Caching is enabled?" 
   type        = string
   default     = "ReadWrite"
 }
 
 variable "win_1_os_disk_sa_type" {
-  description = "What Storage Account type is used for OS Disk Caching" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "What Storage Account type is used for OS Disk Caching"
   type        = string
   default     = "Standard_LRS"
 }
 
 #VM OS Type
 variable "win_1_source_image_publisher" {
-  description = "Publisher of OS Image" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "Publisher of OS Image" 
   type        = string
   default     = "MicrosoftWindowsServer"
 }
 
 variable "win_1_source_image_offer" {
-  description = "What type of OS Image" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "What type of OS Image" 
   type        = string
   default     = "WindowsServer"
 }
 
 variable "win_1_source_image_sku" {
-  description = "What SKU of OS Image" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "What SKU of OS Image" 
   type        = string
   default     = "2016-Datacenter"
 }
 
 variable "win_1_source_image_version" {
-  description = "What version of OS Image" #Format for naming - <VM>-<REGION>-<ENV>-<NAME>_<NUMBER>
+  description = "What version of OS Image" 
   type        = string
   default     = "latest"
 }
@@ -182,13 +187,13 @@ variable "win_1_nic" {
 }
 
 variable "win_1_ip_internal" {
-  description = "Name of the IP Config" #Format for naming - <NIC>-<REGION>-<ENV>-<VM-NAME>-<NUMBER>
+  description = "Name of the IP Config" 
   type        = string
   default     = "internal"
 }
 
 variable "win_1_pip_allocation" {
-  description = "Allocation method used for Private IP Addresses" #Format for naming - <NIC>-<REGION>-<ENV>-<VM-NAME>-<NUMBER>
+  description = "Allocation method used for Private IP Addresses" 
   type        = string
   default     = "Dynamic"
 }

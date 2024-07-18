@@ -1,44 +1,44 @@
-random_string.numbers: Refreshing state... [id=3461]
 random_password.resource: Refreshing state... [id=none]
-module.pip-static-bytes-in-ddos-attack.data.azurerm_resources.AssetsData: Reading...
-module.pip-static-bytes-in-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-b9595d21-5aca-48fa-a5e9-824fbb4ecc3e]
+random_string.numbers: Refreshing state... [id=3461]
 module.vnet-static-ddos-attack.data.azurerm_resources.AssetsData: Reading...
-module.vnet-static-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-196b7f0f-e10e-46fd-acfd-ba6e848b7b6c]
-module.pip-static-ddos-attack.data.azurerm_resources.AssetsData: Reading...
-data.azurerm_subscription.current: Reading...
-azurerm_resource_group.compute: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute]
-azurerm_public_ip.firewall_pubip: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/publicIPAddresses/pubip-uks-test-firewall-1]
-azurerm_monitor_action_group.ag_oncall: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
-module.pip-static-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-8efa9615-1a82-411d-8556-0ad8816219f6]
-azurerm_monitor_action_group.ag_proj: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
-data.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f]
-module.vm-custom-subscription-os-disk-read-latency-alert.data.azurerm_resources.AssetsData: Reading...
-azurerm_resource_group.storage: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-storage]
-azurerm_network_ddos_protection_plan.ddos_std: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/ddosProtectionPlans/ddos-protection-plan]
-azurerm_firewall_policy.firewall_policy: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/firewallPolicies/fw-gbl-test-firewallpolicy]
-azurerm_resource_group.networking: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking]
-azurerm_resource_group.security: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security]
-azurerm_monitor_action_group.ag_itsm: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-itsm-mailbox]
-azurerm_resource_group.monitoring: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring]
-module.vm-custom-subscription-os-disk-read-latency-alert.data.azurerm_resources.AssetsData: Read complete after 1s [id=resource-6fc2fc55-bf3c-4b06-a08d-cc4de86821a3]
-azurerm_network_security_group.nsg_1: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/networkSecurityGroups/nsg-uks-test-virtualmachine_1-1]
-azurerm_storage_account.diagnostics: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-storage/providers/Microsoft.Storage/storageAccounts/saukstestdiag01]
+module.vnet-static-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-a76ff7ae-24d0-47c4-a486-49f08d1c1e0d]
+module.sa-static-availability.data.azurerm_resources.AssetsData: Reading...
+module.sa-static-availability.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-39135bbe-6bb7-4f52-8b6a-9e0c0e6339dd]
 module.pip-static-packets-in-ddos.data.azurerm_resources.AssetsData: Reading...
+module.pip-static-packets-in-ddos.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-1ebb437c-9ef7-4a5d-92e9-c862cd6dfa22]
+module.pip-static-ddos-attack.data.azurerm_resources.AssetsData: Reading...
+module.afw-static-firewall-health.data.azurerm_resources.AssetsData: Reading...
+module.pip-static-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-3e0a9661-61b6-4d7a-9d43-55d096a6b5d9]
+module.afw-static-firewall-health.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-5e5f5ff4-8308-48b5-be38-a7a8846c675f]
+azurerm_resource_group.security: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security]
+azurerm_resource_group.networking: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking]
+azurerm_monitor_action_group.ag_itsm: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-itsm-mailbox]
+azurerm_firewall_policy.firewall_policy: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/firewallPolicies/fw-gbl-test-firewallpolicy]
+azurerm_public_ip.firewall_pubip: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/publicIPAddresses/pubip-uks-test-firewall-1]
+azurerm_storage_account.diagnostics: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-storage/providers/Microsoft.Storage/storageAccounts/saukstestdiag01]
+azurerm_network_security_group.nsg_1: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/networkSecurityGroups/nsg-uks-test-virtualmachine_1-1]
+azurerm_resource_group.compute: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute]
+azurerm_network_ddos_protection_plan.ddos_std: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/ddosProtectionPlans/ddos-protection-plan]
+azurerm_resource_group.storage: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-storage]
+azurerm_monitor_action_group.ag_oncall: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
+azurerm_monitor_action_group.ag_proj: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
+data.azurerm_subscription.current: Reading...
+module.vm-custom-subscription-os-disk-read-latency-alert.data.azurerm_resources.AssetsData: Reading...
+azurerm_resource_group.monitoring: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring]
 azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main]
-module.pip-static-packets-in-ddos.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-7963e64c-8c2d-4006-9c5e-8087bcb7b2cb]
-azurerm_subnet.storage: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-storage]
+module.vm-custom-subscription-os-disk-read-latency-alert.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-47cfcb8f-1d8b-44b8-81fa-ecc92d0f20ad]
+data.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f]
+module.afw-static-snat-port-utilization.data.azurerm_resources.AssetsData: Reading...
+module.pip-static-bytes-in-ddos-attack.data.azurerm_resources.AssetsData: Reading...
+azurerm_subnet.networking: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-network]
 azurerm_subnet.firewall: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/AzureFirewallSubnet]
 azurerm_subnet.security: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-security]
+azurerm_subnet.storage: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-storage]
 azurerm_subnet.compute: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-compute]
-azurerm_subnet.networking: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-network]
-module.sa-static-availability.data.azurerm_resources.AssetsData: Reading...
+module.afw-static-snat-port-utilization.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-57736894-e963-4fd2-b7a9-a42ae8b88528]
+module.pip-static-bytes-in-ddos-attack.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-ed0d1b83-10fd-481a-bc6f-1fb82ab14306]
 azurerm_network_interface.vm_nic: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute/providers/Microsoft.Network/networkInterfaces/nic-uks-test-virtualmachine_1-1]
-module.afw-static-snat-port-utilization.data.azurerm_resources.AssetsData: Reading...
-module.sa-static-availability.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-03806d05-3df5-4a3a-8da9-ff3d560c3fdf]
-module.afw-static-snat-port-utilization.data.azurerm_resources.AssetsData: Read complete after 0s [id=resource-61be6f1f-1e6c-4f3a-83e2-1f7a762504eb]
 azurerm_network_interface_security_group_association.nsg1_vm1: Refreshing state... [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute/providers/Microsoft.Network/networkInterfaces/nic-uks-test-virtualmachine_1-1|/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/networkSecurityGroups/nsg-uks-test-virtualmachine_1-1]
-module.afw-static-firewall-health.data.azurerm_resources.AssetsData: Reading...
-module.afw-static-firewall-health.data.azurerm_resources.AssetsData: Read complete after 1s [id=resource-c70640eb-d1a1-442f-824c-0ad03d54823c]
 
 Note: Objects have changed outside of Terraform
 
@@ -538,8 +538,112 @@ Terraform will perform the following actions:
     }
 
 Plan: 18 to add, 0 to change, 0 to destroy.
+azurerm_network_security_group.nsg_1: Creating...
+azurerm_network_ddos_protection_plan.ddos_std: Creating...
+azurerm_public_ip.firewall_pubip: Creating...
+azurerm_firewall_policy.firewall_policy: Creating...
+azurerm_monitor_action_group.ag_proj: Creating...
+azurerm_monitor_action_group.ag_oncall: Creating...
+azurerm_monitor_action_group.ag_itsm: Creating...
+azurerm_storage_account.diagnostics: Creating...
+azurerm_monitor_action_group.ag_proj: Creation complete after 1s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
+azurerm_public_ip.firewall_pubip: Creation complete after 2s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/publicIPAddresses/pubip-uks-test-firewall-1]
+azurerm_network_security_group.nsg_1: Creation complete after 2s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/networkSecurityGroups/nsg-uks-test-virtualmachine_1-1]
+azurerm_monitor_action_group.ag_itsm: Creation complete after 2s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-itsm-mailbox]
+azurerm_monitor_action_group.ag_oncall: Creation complete after 2s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-monitoring/providers/Microsoft.Insights/actionGroups/action-group-oncall-mailbox]
+azurerm_storage_account.diagnostics: Still creating... [10s elapsed]
+azurerm_firewall_policy.firewall_policy: Still creating... [10s elapsed]
+azurerm_network_ddos_protection_plan.ddos_std: Still creating... [10s elapsed]
+azurerm_network_ddos_protection_plan.ddos_std: Creation complete after 11s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-security/providers/Microsoft.Network/ddosProtectionPlans/ddos-protection-plan]
+azurerm_virtual_network.vnet: Creating...
+azurerm_firewall_policy.firewall_policy: Creation complete after 12s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/firewallPolicies/fw-gbl-test-firewallpolicy]
+azurerm_virtual_network.vnet: Creation complete after 4s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main]
+azurerm_subnet.firewall: Creating...
+azurerm_subnet.networking: Creating...
+azurerm_subnet.compute: Creating...
+azurerm_subnet.security: Creating...
+azurerm_subnet.storage: Creating...
+azurerm_subnet.storage: Creation complete after 4s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-storage]
+azurerm_storage_account.diagnostics: Still creating... [20s elapsed]
+azurerm_storage_account.diagnostics: Creation complete after 21s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-storage/providers/Microsoft.Storage/storageAccounts/saukstestdiag01]
+azurerm_subnet.compute: Creation complete after 8s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-compute]
+azurerm_network_interface.vm_nic: Creating...
+azurerm_subnet.security: Still creating... [10s elapsed]
+azurerm_subnet.networking: Still creating... [10s elapsed]
+azurerm_subnet.firewall: Still creating... [10s elapsed]
+azurerm_subnet.networking: Creation complete after 12s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-network]
+azurerm_subnet.firewall: Creation complete after 16s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/AzureFirewallSubnet]
+azurerm_firewall.firewall: Creating...
+azurerm_network_interface.vm_nic: Still creating... [10s elapsed]
+azurerm_subnet.security: Creation complete after 20s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/virtualNetworks/vnet-uks-main/subnets/snet-uks-security]
+azurerm_firewall.firewall: Still creating... [10s elapsed]
+azurerm_network_interface.vm_nic: Still creating... [20s elapsed]
+azurerm_network_interface.vm_nic: Creation complete after 23s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute/providers/Microsoft.Network/networkInterfaces/nic-uks-test-virtualmachine_1-1]
+azurerm_network_interface_security_group_association.nsg1_vm1: Creating...
+azurerm_windows_virtual_machine.win_vm_1: Creating...
+azurerm_firewall.firewall: Still creating... [20s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [10s elapsed]
+azurerm_network_interface_security_group_association.nsg1_vm1: Still creating... [10s elapsed]
+azurerm_network_interface_security_group_association.nsg1_vm1: Creation complete after 11s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute/providers/Microsoft.Network/networkInterfaces/nic-uks-test-virtualmachine_1-1|/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/networkSecurityGroups/nsg-uks-test-virtualmachine_1-1]
+azurerm_firewall.firewall: Still creating... [30s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [20s elapsed]
+azurerm_firewall.firewall: Still creating... [40s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [30s elapsed]
+azurerm_firewall.firewall: Still creating... [50s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [40s elapsed]
+azurerm_firewall.firewall: Still creating... [1m0s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [50s elapsed]
+azurerm_firewall.firewall: Still creating... [1m10s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m0s elapsed]
+azurerm_firewall.firewall: Still creating... [1m20s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m10s elapsed]
+azurerm_firewall.firewall: Still creating... [1m30s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m20s elapsed]
+azurerm_firewall.firewall: Still creating... [1m40s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m30s elapsed]
+azurerm_firewall.firewall: Still creating... [1m50s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m40s elapsed]
+azurerm_firewall.firewall: Still creating... [2m0s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [1m50s elapsed]
+azurerm_firewall.firewall: Still creating... [2m10s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Still creating... [2m0s elapsed]
+azurerm_windows_virtual_machine.win_vm_1: Creation complete after 2m3s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-compute/providers/Microsoft.Compute/virtualMachines/vm-uks-tst-vm-1]
+azurerm_firewall.firewall: Still creating... [2m20s elapsed]
+azurerm_firewall.firewall: Still creating... [2m30s elapsed]
+azurerm_firewall.firewall: Still creating... [2m40s elapsed]
+azurerm_firewall.firewall: Still creating... [2m50s elapsed]
+azurerm_firewall.firewall: Still creating... [3m0s elapsed]
+azurerm_firewall.firewall: Still creating... [3m10s elapsed]
+azurerm_firewall.firewall: Still creating... [3m20s elapsed]
+azurerm_firewall.firewall: Still creating... [3m30s elapsed]
+azurerm_firewall.firewall: Still creating... [3m40s elapsed]
+azurerm_firewall.firewall: Still creating... [3m50s elapsed]
+azurerm_firewall.firewall: Still creating... [4m0s elapsed]
+azurerm_firewall.firewall: Still creating... [4m10s elapsed]
+azurerm_firewall.firewall: Still creating... [4m20s elapsed]
+azurerm_firewall.firewall: Still creating... [4m30s elapsed]
+azurerm_firewall.firewall: Still creating... [4m40s elapsed]
+azurerm_firewall.firewall: Still creating... [4m50s elapsed]
+azurerm_firewall.firewall: Still creating... [5m0s elapsed]
+azurerm_firewall.firewall: Still creating... [5m10s elapsed]
+azurerm_firewall.firewall: Still creating... [5m20s elapsed]
+azurerm_firewall.firewall: Still creating... [5m30s elapsed]
+azurerm_firewall.firewall: Still creating... [5m40s elapsed]
+azurerm_firewall.firewall: Still creating... [5m50s elapsed]
+azurerm_firewall.firewall: Still creating... [6m0s elapsed]
+azurerm_firewall.firewall: Still creating... [6m10s elapsed]
+azurerm_firewall.firewall: Still creating... [6m20s elapsed]
+azurerm_firewall.firewall: Still creating... [6m30s elapsed]
+azurerm_firewall.firewall: Still creating... [6m40s elapsed]
+azurerm_firewall.firewall: Still creating... [6m50s elapsed]
+azurerm_firewall.firewall: Still creating... [7m0s elapsed]
+azurerm_firewall.firewall: Still creating... [7m10s elapsed]
+azurerm_firewall.firewall: Still creating... [7m20s elapsed]
+azurerm_firewall.firewall: Still creating... [7m30s elapsed]
+azurerm_firewall.firewall: Still creating... [7m41s elapsed]
+azurerm_firewall.firewall: Still creating... [7m51s elapsed]
+azurerm_firewall.firewall: Still creating... [8m1s elapsed]
+azurerm_firewall.firewall: Still creating... [8m11s elapsed]
+azurerm_firewall.firewall: Creation complete after 8m19s [id=/subscriptions/b055686f-a26e-43f3-971e-f03a89a7979f/resourceGroups/rg-uks-networking/providers/Microsoft.Network/azureFirewalls/fw-gbl-test-firewall]
 
-─────────────────────────────────────────────────────────────────────────────
-
-Note: You didn't use the -out option to save this plan, so Terraform can't
-guarantee to take exactly these actions if you run "terraform apply" now.
+Apply complete! Resources: 18 added, 0 changed, 0 destroyed.

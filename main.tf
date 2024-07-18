@@ -2,7 +2,7 @@
 
 PROJECT NAME:       AZURE-VM-NSG-ALERTS
 CREATED BY:         THEANGRYTECH-GIT
-REPO:               https://github.com/theangrytech-git/azure-media-upload
+REPO:               https://github.com/theangrytech-git/azure-vm-nsg-alerts
 DESCRIPTION:        This project sets up an Azure environment which includes a
 VNet, subnets, an NSG, Azure Firewall, Azure DDoS, a VM plus Disk, Storage
 Accounts, Public IP's and Alert Rules.
@@ -66,41 +66,53 @@ resource "azurerm_resource_group" "security" {
 resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_main
   address_space       = ["10.0.0.0/19"]
-  location = var.location
-  resource_group_name = var.rg_networking
+  location            = var.location
+  resource_group_name = azurerm_resource_group.networking.name
   ddos_protection_plan {
     id     = azurerm_network_ddos_protection_plan.ddos_std.id
     enable = true
   }
-  depends_on = [ azurerm_network_ddos_protection_plan.ddos_std ]
+  depends_on = [azurerm_network_ddos_protection_plan.ddos_std]
 }
 
 resource "azurerm_subnet" "compute" {
   name                 = var.snet_compute
-  resource_group_name  = var.rg_networking
-  virtual_network_name = var.vnet_main
+  resource_group_name  = azurerm_resource_group.networking.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/28"]
+  depends_on           = [azurerm_virtual_network.vnet]
 }
 
 resource "azurerm_subnet" "storage" {
   name                 = var.snet_storage
-  resource_group_name  = var.rg_networking
-  virtual_network_name = var.vnet_main
+  resource_group_name  = azurerm_resource_group.networking.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.2.0/28"]
+  depends_on           = [azurerm_virtual_network.vnet]
 }
 
 resource "azurerm_subnet" "networking" {
   name                 = var.snet_network
-  resource_group_name  = var.rg_networking
-  virtual_network_name = var.vnet_main
+  resource_group_name  = azurerm_resource_group.networking.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.3.0/28"]
+  depends_on           = [azurerm_virtual_network.vnet]
 }
 
 resource "azurerm_subnet" "security" {
   name                 = var.snet_security
-  resource_group_name  = var.rg_networking
-  virtual_network_name = var.vnet_main
+  resource_group_name  = azurerm_resource_group.networking.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.4.0/28"]
+  depends_on           = [azurerm_virtual_network.vnet]
+}
+
+resource "azurerm_subnet" "firewall" {
+  name                 = var.snet_firewall
+  resource_group_name  = azurerm_resource_group.networking.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  address_prefixes     = ["10.0.5.0/26"]
+  depends_on           = [azurerm_virtual_network.vnet]
 }
 
 /*******************************************************************************
@@ -128,7 +140,8 @@ resource "azurerm_windows_virtual_machine" "win_vm_1" {
   size                = var.win_1_vm_size
   admin_username      = var.win_1_admin_un
   admin_password      = "${random_password.resource.result}" # Sensitive by default
-  hotpatching_enabled = true
+  # hotpatching_enabled = true #Can be enabled if OS supports it
+  # patch_mode = "AutomaticByPlatform" #Can be enabled if OS supports it
   network_interface_ids = [
     azurerm_network_interface.vm_nic.id,
   ]
@@ -145,7 +158,8 @@ resource "azurerm_windows_virtual_machine" "win_vm_1" {
     version   = var.win_1_source_image_version
   }
   boot_diagnostics {
-    storage_account_uri = "${azurerm_storage_account.diagnostics.primary_web_endpoint}"
+    storage_account_uri = "${azurerm_storage_account.diagnostics.primary_blob_endpoint}"
+
   }
 
   depends_on = [azurerm_network_interface.vm_nic, azurerm_storage_account.diagnostics]
@@ -199,7 +213,7 @@ resource "azurerm_network_interface_security_group_association" "nsg1_vm1" {
 resource "azurerm_public_ip" "firewall_pubip" {
   name                = var.firewall_pubip_name
   location = var.location
-  resource_group_name = var.rg_security
+  resource_group_name = var.rg_networking
   allocation_method   = var.firewall_pubip_allocation
   sku                 = var.firewall_pubip_sku
 }
@@ -207,13 +221,13 @@ resource "azurerm_public_ip" "firewall_pubip" {
 resource "azurerm_firewall" "firewall" {
   name                = var.firewall_name
   location = var.location
-  resource_group_name = var.rg_security
+  resource_group_name = var.rg_networking
   sku_name            = var.firewall_sku_name
   sku_tier            = var.firewall_sku_tier
 
   ip_configuration {
     name                 = var.firewall_ipconfig_name
-    subnet_id            = azurerm_subnet.security.id
+    subnet_id            = azurerm_subnet.firewall.id  
     public_ip_address_id = azurerm_public_ip.firewall_pubip.id
   }
 
@@ -224,7 +238,7 @@ resource "azurerm_firewall" "firewall" {
 
 resource "azurerm_firewall_policy" "firewall_policy" {
   name                = var.fw_policy_name
-  resource_group_name = var.rg_security
+  resource_group_name = var.rg_networking
   location = var.location
 }
 
@@ -282,14 +296,6 @@ resource "azurerm_monitor_action_group" "ag_proj" {
   }
 }
 
-/***************** SERVICE HEALTH ALERTS ************************/
-
-module "health_advisories" {
-  source          = "./modules/service-alert"
-  subscription_id = data.azurerm_subscription.current.subscription_id
-
-  ag_itsm   = azurerm_monitor_action_group.ag_itsm.id
-}
 
 /***************** FIREWALLS STATIC ALERTS ************************/
 module "afw-static-firewall-health" {

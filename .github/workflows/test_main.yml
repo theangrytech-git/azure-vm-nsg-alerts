@@ -1,6 +1,7 @@
 name: msdo-reusable
 
 on:
+  workflow_dispatch:
   workflow_call:
     inputs:
       branch:

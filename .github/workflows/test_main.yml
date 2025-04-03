@@ -1,0 +1,120 @@
+name: msdo-reusable
+
+on:
+  workflow_call:
+    inputs:
+      branch:
+        required: false
+        type: string
+        default: 'main'
+    secrets:
+      GH_TOKEN:
+        required: false
+
+jobs:
+  msdo:
+    name: Microsoft Security DevOps
+    runs-on: windows-latest
+
+    permissions:
+      contents: read
+      id-token: write
+      actions: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Set environment variables for tools
+        shell: pwsh
+        run: |
+          $TOOLS = ""
+
+          if ((Get-ChildItem -Recurse -Include *.js, *.jsx, *.ts, *.tsx  | Measure-Object).Count -gt 0) {
+            $TOOLS += "eslint,"
+            echo "ESLint enabled - JS/JSX/TS/TSX files detected."
+          } else {
+            echo "ESLint skipped - No JS/JSX/TS/TSX files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.exe, *.dll | Measure-Object).Count -gt 0) {
+            $TOOLS += "binskim,"
+            echo "BinSkim enabled - EXE/DLL files detected."
+          } else {
+            echo "BinSkim skipped - No EXE/DLL files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.py | Measure-Object).Count -gt 0) {
+            $TOOLS += "bandit,"
+            echo "Bandit enabled - Python files detected."
+          } else {
+            echo "Bandit skipped - No Python files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.tf, *.json, *.yml, *.yaml, *.dockerfile, *.template, *.bicep | Measure-Object).Count -gt 0) {
+            $TOOLS += "checkov,"
+            echo "Checkov enabled - Terraform/JSON/YML/YAML/Dockerfiles/Templates/Bicep files detected."
+          } else {
+            echo "Checkov skipped - No Terraform/JSON/YML/YAML/Dockerfiles/Templates/Bicep files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.json | Select-String 'resources' | Measure-Object).Count -gt 0) {
+            $TOOLS += "templateanalyzer,"
+            echo "Template Analyzer enabled - ARM templates detected."
+          } else {
+            echo "Template Analyzer skipped - No ARM templates found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.bicep | Measure-Object).Count -gt 0) {
+            $TOOLS += "templateanalyzer,"
+            echo "Template Analyzer enabled - Bicep files detected."
+          } else {
+            echo "Template Analyzer skipped - No Bicep files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include *.tf, *.json, *.yml, *.yaml | Measure-Object).Count -gt 0) {
+            $TOOLS += "terrascan,"
+            echo "Terrascan enabled - Terraform/JSON/YML/YAML files detected."
+          } else {
+            echo "Terrascan skipped - No Terraform/JSON/YML/YAML files found."
+          }
+
+          if ((Get-ChildItem -Recurse -Include Dockerfile | Measure-Object).Count -gt 0) {
+            $TOOLS += "trivy,"
+            echo "Trivy enabled - Dockerfiles detected."
+          } else {
+            echo "Trivy skipped - No Dockerfiles found."
+          }
+
+          $TOOLS = $TOOLS.TrimEnd(',')
+
+          if ($TOOLS -eq "") {
+            echo "No applicable tools found. The MSDO scan will be skipped."
+            exit 0
+          }
+
+          echo "TOOLS=$TOOLS" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8
+
+      - name: Run Microsoft Security DevOps
+        uses: microsoft/security-devops-action@latest
+        id: msdo
+        with:
+          tools: ${{ env.TOOLS }}
+
+      - name: Check Repository Visibility
+        shell: bash
+        run: |
+          if [ "${{ github.repository_visibility }}" == "private" ]; then
+            echo "This is a private repository. Code Scanning is not available unless GitHub Advanced Security (GHAS) is enabled."
+            echo "For private repositories, consider enabling GHAS or using external security tools like SonarQube or Snyk."
+            exit 0
+          fi
+
+      - name: Upload alerts to Security tab
+        if: github.repository_visibility == 'public'
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ steps.msdo.outputs.sarifFile }}
